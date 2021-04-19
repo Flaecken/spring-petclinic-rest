@@ -11,16 +11,6 @@ pipeline {
                 bat "mvn compile"
             }
         }
-        /*stage('Test 1') {
-            steps {
-               bat "mvn test"
-            }
-            post {
-                always {
-                    junit '*//*TEST.xml'
-               }
-            }
-        }*/
               stage('Second Checkout') {
                 steps {
                   git 'https://github.com/Flaecken/spring-petclinic-angular.git'
@@ -31,15 +21,5 @@ pipeline {
         bat "mvn compile"
       }
     }
-   /* stage('Test 2') {
-      steps {
-        bat "mvn test"
-      }
-     post {
-      always {
-        junit '*//*TEST.xml'
-      }
-     }
-        } */
     }
 }
