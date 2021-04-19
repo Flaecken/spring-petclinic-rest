@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Flaecken/spring-petclinic-angular.git'
+                git 'https://github.com/Flaecken/spring-petclinic-rest.git'
             }
         }
          stage('Build') {
@@ -23,7 +23,7 @@ pipeline {
         }
               stage('Checkout') {
                 steps {
-                  git 'https://github.com/Flaecken/spring-petclinic-rest.git'
+                  git 'https://github.com/Flaecken/spring-petclinic-angular.git'
                 }
               }
             stage('Build') {
