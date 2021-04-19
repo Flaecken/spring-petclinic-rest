@@ -1,17 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('First Checkout') {
             steps {
                 git 'https://github.com/Flaecken/spring-petclinic-rest.git'
             }
         }
-         stage('Build') {
+         stage('Build 1') {
             steps {
                 bat "mvn compile"
             }
         }
-        stage('Test') {
+        stage('Test 1') {
             steps {
                 bat "mvn test"
             }
@@ -21,17 +21,17 @@ pipeline {
                 }
             }
         }
-              stage('Checkout') {
+              stage('Second Checkout') {
                 steps {
                   git 'https://github.com/Flaecken/spring-petclinic-angular.git'
                 }
               }
-            stage('Build') {
+            stage('Build 2') {
       steps {
         bat "mvn compile"
       }
     }
-    stage('Test') {
+    stage('Test 2') {
       steps {
         bat "mvn test"
       }
