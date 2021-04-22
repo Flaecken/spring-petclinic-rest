@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('First Checkout') {
-            steps {
-                git 'https://github.com/Flaecken/spring-petclinic-rest.git'
-            }
-        }
          stage('Build 1') {
             steps {
                 bat "mvn compile"
