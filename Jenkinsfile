@@ -6,15 +6,11 @@ pipeline {
                 bat "mvn compile"
             }
         }
-              stage('Second Checkout') {
-                steps {
-                  git 'https://github.com/Flaecken/spring-petclinic-angular.git'
-                }
-              }
-            stage('Build 2') {
-      steps {
-        bat "mvn compile"
-      }
-    }
+    stage('Build API') {
+           steps {
+               sh "nohup mvn spring-boot:run &"
+              
+           }
+        }
     }
 }
